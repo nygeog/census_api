@@ -2,8 +2,7 @@ import pandas as pd
 import glob
 import csv
 
-proj_path = '/Volumes/Echo/GIS/projects/nets/tasks/201406_nets_sum_by_flag/'
-pp = proj_path
+pp = '/Volumes/Echo/GIS/projects/nets/tasks/201406_nets_sum_by_flag/'
 pt = pp + 'data/input/census/'
 
 csv_dir = pt
