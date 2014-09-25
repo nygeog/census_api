@@ -1,0 +1,43 @@
+B01003 Total Population
+
+
+B25044
+
+B25044 Tenure By Vehicles Available
+Yes
+104 111-125
+
+
+B25045
+Tenure By Vehicles Available By Age Of Householder Yes 104 126-144
+
+B25046
+Aggregate Number Of Vehicles Available By Tenure
+
+
+
+
+
+		MEANS OF TRANSPORTATION TO WORK BY TENURE FOR WORKPLACE GEOGRAPHY
+		Universe:  Workers 16 years and over in households
+1	B08537001	Total:
+2	B08537002	Householder lived in owner-occupied housing units
+3	B08537003	Householder lived in renter-occupied housing units
+4	B08537004	Car, truck, or van - drove alone:
+5	B08537005	Householder lived in owner-occupied housing units
+6	B08537006	Householder lived in renter-occupied housing units
+7	B08537007	Car, truck, or van - carpooled:
+8	B08537008	Householder lived in owner-occupied housing units
+9	B08537009	Householder lived in renter-occupied housing units
+10	B08537010	Public transportation (excluding taxicab):
+11	B08537011	Householder lived in owner-occupied housing units
+12	B08537012	Householder lived in renter-occupied housing units
+13	B08537013	Walked:
+14	B08537014	Householder lived in owner-occupied housing units
+15	B08537015	Householder lived in renter-occupied housing units
+16	B08537016	Taxicab, motorcycle, bicycle, or other means:
+17	B08537017	Householder lived in owner-occupied housing units
+18	B08537018	Householder lived in renter-occupied housing units
+19	B08537019	Worked at home:
+20	B08537020	Householder lived in owner-occupied housing units
+21	B08537021	Householder lived in renter-occupied housing units

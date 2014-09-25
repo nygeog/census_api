@@ -10,8 +10,6 @@ pp = proj_path
 pd = pp + 'data/input/census/'
 
 
-#-----acs 5 year 2012-2008
-
 totpop = ["P0010001"] #Total Population (Weighted)
 
 
