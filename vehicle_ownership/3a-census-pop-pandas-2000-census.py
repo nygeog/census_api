@@ -1,8 +1,9 @@
 import pandas as pd
 
-proj_path = '/Volumes/Echo/GIS/projects/nets/tasks/201406_nets_sum_by_flag/'
-pp = proj_path
+pp = '/Volumes/Echo/GIS/projects/transit/tasks/201405_transit/data/input/census_fact_finder/vehicle/2000_census/'
 pt = pp + 'data/input/census/'
+
+#start updating here 
 
 inFile  = pt + 'census_2010_tracts.csv'
 outFile = pt + 'census_2010_tracts_geoid.csv'

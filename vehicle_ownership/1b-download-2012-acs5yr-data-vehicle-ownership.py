@@ -5,8 +5,7 @@ import sys, re, time
 
 pause = 1
 
-proj_path = '/Volumes/Echo/GIS/projects/transit/tasks/201405_transit/data/input/census_fact_finder/vehicle/2012_acs5yr/original/'
-pp = proj_path
+pp = '/Volumes/Echo/GIS/projects/transit/tasks/201405_transit/data/input/census_fact_finder/vehicle/2012_acs5yr/original/'
 pd = pp
 
 

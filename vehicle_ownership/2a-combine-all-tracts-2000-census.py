@@ -2,8 +2,7 @@ import pandas as pd
 import glob
 import csv
 
-proj_path = '/Volumes/Echo/GIS/projects/transit/tasks/201405_transit/data/input/census_fact_finder/vehicle/2000_census/'
-pp = proj_path 
+pp = '/Volumes/Echo/GIS/projects/transit/tasks/201405_transit/data/input/census_fact_finder/vehicle/2000_census/'
 pt = pp + 'original/'
 
 variabletypelistnm =['totpop','vehic1','vehic2']
