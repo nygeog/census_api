@@ -1,4 +1,3 @@
-import pandas as pd
 import re, urllib, time, zipfile, os 
 
 download_location = "/Volumes/Hotel/Dropbox/GIS/Data/Census/census_2000/tigerline/"
