@@ -1,6 +1,6 @@
 import re, urllib, time, zipfile, os 
 
-download_location = "/Volumes/Hotel/Dropbox/GIS/Data/Census/census_2000/tigerline/"
+download_location = "/Volumes/Hotel/Dropbox/GIS/Data/Census/census_2000/tigerline/counties/36/"
 
 inCSV = open("list_of_ny_counties.txt")
 
