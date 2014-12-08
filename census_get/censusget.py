@@ -4,6 +4,7 @@ env.overwriteOutput = True
 import csv
 
 xyList =  'Z:/GitHub/census_api/census_get/data/xy_list.csv'
+xyList =  'Y:/GitHub/census_api/census_get/data/xy_list.csv'
 
 dataDirectory = 'Z:/Dropbox/GIS/Projects/CensusGet' #iMac
 dataDirectory = 'W:/GIS/Projects/CensusGet' #Mac Pro
@@ -52,7 +53,7 @@ arcpy.MakeXYEventLayer_management(dd+"/input.gdb/xy_list",lngField,latField,"xy_
 arcpy.FeatureClassToFeatureClass_conversion("xy_list_Layer",dd+"/input.gdb","xy_wgs84")
 arcpy.Intersect_analysis(dd+"/input.gdb/xy_wgs84 #;"+utm_bounds,dd+"/input.gdb/xy_wgs84_utm_int","ALL","#","INPUT")
 
-def FindField(fc,myField,outGDB):
+def CensusGet1(fc,myField,outGDB):
     fieldList = arcpy.ListFields(fc)
     for field in fieldList:
         if str.lower(str(field.name)) == str.lower(myField):
@@ -98,7 +99,7 @@ def FindField(fc,myField,outGDB):
                 arcpy.Intersect_analysis(biggestBuf+" #;W:/GIS/Data/Census/census_2010/states/tl_2013_us_state/tl_2013_us_state.shp","W:/GIS/Projects/CensusGet/states_int.gdb/utm_"+str(i)+'_b'+str(bufList[-1]),"ALL","#","INPUT")
 
             from arcpy import env
-            env.workspace = "W:/GIS/Projects/CensusGet/states_int.gdb"
+            env.workspace = dd+"states_int.gdb"
 
             fcList = arcpy.ListFeatureClasses()
 
@@ -113,9 +114,9 @@ def FindField(fc,myField,outGDB):
 outGDB = dd + '/processing.gdb'
 myField = 'ZONE'
 fc = dd+"/input.gdb/xy_wgs84_utm_int"
-FindField(fc,myField,outGDB)
+CensusGet1(fc,myField,outGDB)
 
-statesCSV = "W:/GIS/Projects/CensusGet/states_list/states_list.csv"
+statesCSV = dd+"states_list/states_list.csv"
 
 with open(statesCSV, 'rb') as f:
     reader = csv.reader(f)
@@ -156,7 +157,7 @@ print 'create merged all states geos (change and create to a variable for tracts
 arcpy.Merge_management(fcList, "W:/GIS/Projects/CensusGet/states_all.gdb/all_states_tracts")
 
 
-def FindField2(fc,myField,outGDB):
+def CensusGet2(fc,myField,outGDB):
     fieldList = arcpy.ListFields(fc)
     for field in fieldList:
         if str.lower(str(field.name)) == str.lower(myField):
@@ -225,7 +226,7 @@ def FindField2(fc,myField,outGDB):
             print 'export master list of counties'
             arcpy.ExportXYv_stats("W:/GIS/Projects/CensusGet/counties.gdb/sel_tracts_dis_county_prj","geoid_county","COMMA","W:/GIS/Projects/CensusGet/county_list/county_list.csv","NO_FIELD_NAMES")
 
-FindField2(fc,myField,outGDB)
+CensusGet2(fc,myField,outGDB)
 
 print 'get counties list (csv)'
 countyCSV = "W:/GIS/Projects/CensusGet/county_list/county_list.csv"
@@ -272,7 +273,7 @@ print 'intersect water and utm boundaries'
 arcpy.Intersect_analysis("W:/GIS/Projects/CensusGet/counties_water.gdb/sel_water #;W:/GIS/Data/UTM_Zone_Boundaries/UTM_Zone_Boundaries.shp #","W:/GIS/Projects/CensusGet/counties_water.gdb/sel_water_int","ALL","#","INPUT")
       
 
-def FindField3(fc,myField,outGDB):
+def CensusGet3(fc,myField,outGDB):
     fieldList = arcpy.ListFields(fc)
     for field in fieldList:
         if str.lower(str(field.name)) == str.lower(myField):
@@ -316,7 +317,7 @@ def FindField3(fc,myField,outGDB):
                 print 'calc landarea field utm '+str(i)
                 arcpy.CalculateField_management("W:/GIS/Projects/CensusGet/tracts_prj.gdb/tracts_"+str(i)+'_prj_lnd',"landarea","!shape.area@squaremeters!","PYTHON_9.3","#")
                 
-FindField3(fc,myField,outGDB)
+CensusGet3(fc,myField,outGDB)
 
 
 

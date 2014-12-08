@@ -1,10 +1,10 @@
-from censusget import CensusGet
+from censusget2 import CensusGet
 
 
-xyList        = 
-dataDirectory = 
-censusYear    = 
-variablesList = ['']
+# xyList        = 
+# dataDirectory = 
+# censusYear    = 
+# variablesList = ['']
 
 
 
