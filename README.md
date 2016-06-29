@@ -21,3 +21,7 @@ Here are some sample for population url's for Census Tract
 #####Example Pop for State: 36, County: 1, Tract: 100
 ######2235
 	http://api.census.gov/data/2012/acs5?key=30699f15ab4d04a1e0943715b539d256c9a3ee44&get=B01003_001E&for=tract:*&in=state:36
+
+
+### [Understanding Geographic Identifiers (GEOIDs)](https://www.census.gov/geo/reference/geoidentifiers.html)
+https://www.census.gov/geo/reference/geoidentifiers.html
